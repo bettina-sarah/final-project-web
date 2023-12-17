@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/*media queries*/
+p {
+    font-size: 20px;
+    color: blue;
+}
+/*ORDINATEUR*/
+@media screen and (min-width: 1200px) {
+    p {
+        font-size: 40px;
+        color: green;
+    }
+}
+/*TABLETTE*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    p {
+        font-size: 60px;
+        color: red;
+    }
+}
+
+/*MOBILE*/
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 60px;
+        color: red;
+    }
+}
+
+footer div {
+    display:flex;
+}
+
+footer div img {
+    max-width: 100px;
+    max-height: 50px;
+}

@@ -1,0 +1,269 @@
+/*SOURCES
+HEADER image: https://upload.wikimedia.org/wikipedia/commons/5/5d/Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg
+*/
+
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&family=Pacifico&display=swap');
+
+:root
+{
+box-sizing: border-box;
+font-family: 'Montserrat';
+font-size: 21px;
+}
+
+*, *:before, *:after {
+  font-size:40px;
+box-sizing: inherit;}
+
+/*media queries*/
+/*ORDINATEUR*/
+@media screen and (min-width: 1200px) {
+    p {
+        font-size: 40px;
+        color: green;
+    }
+}
+/*TABLETTE*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    p {
+        font-size: 60px;
+        color: red;
+    }
+}
+
+/*MOBILE*/
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 30px;
+        color: red;
+    }
+}
+
+body {
+    background-image:url(./IMAGES/Eugène_Delacroix_-_Le_28_Juillet._La_Liberté_guidant_le_peuple.jpg);
+    padding:0px;
+    margin:0px;
+    background-size: cover;
+   /* box-shadow: 100px 100px;*/
+}
+
+h1 { 
+  margin-top:170px;
+  padding:10px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Anton', sans-serif;
+    color:rgb(104, 11, 11);
+    text-shadow: 5px 5px 0 #000;
+    font-size: 90px;
+}
+
+/*animation titre*/
+@keyframes glow {
+  from{text-shadow: 0 0 10px #8a4848, 0 0 20px #874f4f, 0 0 30px #6b3550, 
+    0 0 40px #412734, 0 0 50px #38202c, 0 0 60px #280a19, 0 0 70px #070004;
+
+  }
+
+  to{text-shadow: 0 0 20px #321717, 0 0 30px #5f4e56, 0 0 40px #6c3232, 
+    0 0 50px #4c303e, 0 0 60px #602744, 0 0 70px #680a39, 0 0 80px #56032d;
+  }
+}
+
+
+header h1:hover {
+text-shadow: 5px 5px rgb(188, 8, 8);
+color:rgb(9, 2, 39); 
+animation: glow 1.2s ease-in-out infinite alternate;
+}
+
+/*animation apres header*/
+/*j'ai trouvé cette partie difficile a faire car j'ai consulté plusieurs
+sources et ca a pris beaucoup de temps a marcher; surtout le hover pour arreter l'animation
+une source: https://stackoverflow.com/questions/45847392/pure-css-continuous-horizontal-text-scroll-without-break
+aussi le site que je me suis inspiré de la fonctionnalité: 
+https://newcitygas.com*/
+
+  .wrapper {
+    width: 200vw;
+    display: flex;
+    overflow: hidden;
+    flex-wrap:nowrap;
+    /* white-space: nowrap; */
+  /* display: inline-block; */
+}
+/*  */
+.wrapper>div {
+  /* transform-origin: top left; */
+  font-family: 'Pacifico';
+  font-size:40px;
+  height: 80px;
+  width: 100vw;
+  
+  /* background-size: cover; */
+}
+
+.banner-one {
+    background-color:rgb(104, 11, 11);
+    animation: turningBanner 8s linear both infinite;
+  }
+
+.banner-two {
+    background-color: yellow;
+    animation: turningBannerTwo 8s linear both infinite;
+  }
+
+  /* .banner div {
+    display: inline-block;
+  } */
+  
+  @keyframes turningBanner {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes turningBannerTwo {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+  }
+
+  /* previous sibling */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/:has#examples */
+  .banner:has(+.banner:hover) {
+    color:rgb(123, 255, 255);
+    background-color: rgb(123, 244, 244);
+    animation-play-state: paused;
+  }
+
+  /* current */
+  .banner:hover{
+    color:rgb(255, 255, 255);
+    background-color: rgb(249, 244, 244);
+    animation-play-state: paused;
+  }
+
+  /* next sibling */
+  .banner:hover+.banner {
+    color:rgb(123, 255, 255);
+    background-color: rgb(123, 244, 244);
+    animation-play-state: paused;
+  }
+
+  nav{
+    display:flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: purple;
+    color:wheat;
+  }
+  .apropos{
+    background-color: blueviolet;
+  }
+  .centrales_syndicales{
+    background-color: goldenrod;
+  }
+
+  footer {
+    font-family: 'Pacifico';
+    border-width: 100px;
+    border-color: black;
+    background-color: red;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+@keyframes turningBanner {
+0%   {background-color:rgb(121, 1, 151); left:0px; top:0px;}
+10%   {background-color:rgb(151, 63, 173); left:100px; top:0px;}
+20%  {background-color:rgb(247, 0, 255); left:200px; top:0px;}
+30%  {background-color:rgb(231, 42, 184); left:300px; top:0px;}
+40%  {background-color:rgb(255, 0, 140); left:400px; top:0px;}
+50%  {background-color:rgb(183, 10, 199); left:500px; top:0px;}
+60%  {background-color:rgb(135, 53, 228); left:600px; top:0px;}
+70%  {background-color:rgb(93, 17, 236); left:700px; top:0px;}
+80%  {background-color:rgb(53, 10, 245); left:800px; top:0px;}
+90% {background-color:rgb(24, 4, 136); left:900px; top:0px;}
+100% {background-color:rgb(121, 1, 151); left:0px; top:0px;}
+}
+
+section#banner {
+    font-family: 'Pacifico', cursive;
+    font-size:40px;
+    width: 1800px;
+    height: 80px;
+    position: relative;
+    background-color: red;
+    animation-name: turningBanner;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2s;
+}
+
+.element {
+    animation: pulse 5s infinite;
+  }
+
+@keyframes pulse {
+    0% {
+      background-color: #001F3F;
+    }
+    100% {
+      background-color: #FF4136;
+    }
+}*/
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Contact</title>
+    <link rel="stylesheet" href="./contact.css">
+</head>
+<body>
+    <header>
+        Formulaire contact
+    </header>
+    <main>
+      <nav>
+        <ul>
+          <li><a href="./accueil.html" class="accueil">Accueil</a></li>
+          <li><a href="./actualite.html" class="actualite">Explications et actualités</a></li>
+          <li><a href="./contact.html" class="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <form action="#" method="post">
+        <div>
+            <label for="personnage">Nom du personnage</label>
+            <input type="email"
+            placeholder="moi@exemple.ca"
+            required
+            
+            name="personnage" id="personnage" />
+        </div>
+        <select name="selection" id="selection">
+            <option value="1">Pomme</option>
+            <option value="15">Banane</option>
+            <option value="0">Fraise</option>
+        </select>
+        <button type="reset">Effacer</button>
+        <input type="submit" />
+    </form> 
+    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+        
+      <div class="fcf-form-group">
+          <label for="Name" class="fcf-label">Your name</label>
+          <div class="fcf-input-group">
+              <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+          </div>
+      </div>
+
+      <div class="fcf-form-group">
+          <label for="Email" class="fcf-label">Your email address</label>
+          <div class="fcf-input-group">
+              <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+          </div>
+      </div>
+
+      <div class="fcf-form-group">
+          <label for="Message" class="fcf-label">Your message</label>
+          <div class="fcf-input-group">
+              <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+          </div>
+      </div>
+
+      <div class="fcf-form-group">
+          <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+      </div>
+
+      <div class="fcf-credit" id="fcf-credit">
+      Simple HTML email form provided by <a href="https://www.majesticform.com" target="_blank">MajesticForm</a>
+      </div>
+
+  </form>
+    
+
+
+
+    </main>
+    <footer>
+      <div><img src="./IMAGES/Logo-csn.png" alt="CSN">
+        <p>Noémi Desrochers</p>
+        <p>noemi.desrochers@csn.qc.ca</p>
+        <p>514 216-1825</p>
+      </div>
+        <div><img src="./IMAGES/logo-csq.png" alt="CSQ">
+          <p>Maude Messier</p>
+          <p>messier.maude@lacsq.org</p>
+          <p>514 213-0770</p>
+        </div>
+        <div><img src="./IMAGES/logo-ftq.png" alt="FTQ">
+          <p>Jean Laverdière</p>
+          <p>jlaverdiere@ftq.qc.ca</p>         
+          <p>514 893-7809</p>
+        </div>
+        <div><img src="./IMAGES/logo-apts.png" alt="APTS">
+          <p>Maxime Clément</p>
+          <p>mclement@aptsq.com</p>
+          <p>514 792-0481</p>
+        </div>
+</footer>
+
+</body>
+</html>

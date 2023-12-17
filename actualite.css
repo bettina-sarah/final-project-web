@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/*media queries*/
+p {
+    font-size: 40px;
+    color: blue;
+}
+/*ORDINATEUR*/
+@media screen and (min-width: 1200px) {
+    p {
+        font-size: 80px;
+        color: gree
+    }
+}
+/*TABLETTE*/
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    p {
+        font-size: 60px;
+        color: red;
+    }
+}
+
+/*MOBILE*/
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 60px;
+        color: red;
+    }
+}
